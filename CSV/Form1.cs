@@ -62,10 +62,10 @@ namespace CSV
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            FileStream fs = new FileStream(@"C:\Users\niahken_wu\source\repos\CSV\test.csv", System.IO.FileMode.Create, System.IO.FileAccess.Write);
+            /*FileStream fs = new FileStream(@"C:\Users\user\Desktop\20200419前的程式\2020\CSV\test.csv", System.IO.FileMode.Create, System.IO.FileAccess.Write);
             StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.Default);
             sw.WriteLine(textBox1.Text);
-            sw.Close();
+            sw.Close();*/
             SaveFileDialog saveFile = new SaveFileDialog();
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
@@ -83,11 +83,11 @@ namespace CSV
         private void btnOpen_Click(object sender, EventArgs e)
         {
           
-            string[] readtext = System.IO.File.ReadAllLines(@"C:\Users\niahken_wu\source\repos\CSV\test.csv", Encoding.Default);
+            /*string[] readtext = System.IO.File.ReadAllLines(@"C:\Users\niahken_wu\source\repos\CSV\test.csv", Encoding.Default);
             foreach (string s in readtext)
             {
                 textBox1.Text += s + "\r\n";
-            }
+            }*/
             OpenFileDialog dialog = new OpenFileDialog();//選擇路徑
             dialog.Title = "open title";
             dialog.Filter="Text Files(*.txt)|*.txt|all files(*.*)|*.*";
